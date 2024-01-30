@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import All from "./components/Categories-pages/All";
@@ -15,13 +14,12 @@ import ProductPage, { CartContext } from "./pages/ProductPage";
 
 function App() {
   const navigate = useNavigate();
+  const [cartItem, setCartItem] = useState([]);
 
   useEffect(() => {
     // Redirect to the home page when the component mounts
     navigate("/");
   }, [navigate]);
-
-  const [cartItem, setCartItem] = useState([]);
 
   const addToCart = (item) => {
     setCartItem([...cartItem, item]);
@@ -43,20 +41,22 @@ function App() {
 
   return (
     <CartContext.Provider value={{ cartItem, addToCart, setCartItem }}>
-      <Navbar />
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="categories" element={<Categories />}>
-          <Route path="all" element={<All />} />
-          <Route path="furnitures" element={<Furnitures />} />
-          <Route path="electronics" element={<Electronics />} />
-          <Route path="lamps" element={<Lamps />} />
-          <Route path="kitchen" element={<Kitchen />} />
-          <Route path="chairs" element={<Chairs />} />
-          <Route path="skin-care" element={<SkinCare />} />
-        </Route>
-        <Route path="categories/product/:id" element={<ProductPage />} />
-      </Routes>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="categories" element={<Categories />}>
+            <Route path="all" element={<All />} />
+            <Route path="furnitures" element={<Furnitures />} />
+            <Route path="electronics" element={<Electronics />} />
+            <Route path="lamps" element={<Lamps />} />
+            <Route path="kitchen" element={<Kitchen />} />
+            <Route path="chairs" element={<Chairs />} />
+            <Route path="skin-care" element={<SkinCare />} />
+          </Route>
+          <Route path="categories/product/:id" element={<ProductPage />} />
+        </Routes>
+      </BrowserRouter>
     </CartContext.Provider>
   );
 }
