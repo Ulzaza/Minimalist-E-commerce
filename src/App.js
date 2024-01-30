@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
@@ -10,9 +12,15 @@ import Kitchen from "./components/Categories-pages/Kitchen";
 import Chairs from "./components/Categories-pages/Chairs";
 import SkinCare from "./components/Categories-pages/SkinCare";
 import ProductPage, { CartContext } from "./pages/ProductPage";
-import { useEffect, useState } from "react";
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Redirect to the home page when the component mounts
+    navigate("/");
+  }, [navigate]);
+
   const [cartItem, setCartItem] = useState([]);
 
   const addToCart = (item) => {
@@ -38,7 +46,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
           <Route path="furnitures" element={<Furnitures />} />
@@ -54,5 +61,4 @@ function App() {
   );
 }
 
-export default App;
 export default App;
