@@ -12,7 +12,6 @@ function Footer() {
           <a href="#">Careers</a>
           <a href="#">Contact Us</a>
         </div>
-        </p>
       </footer>
     </>
   );
