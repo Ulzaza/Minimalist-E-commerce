@@ -41,3 +41,4 @@ function CartWithItems() {
 }
 
 export default CartWithItems;
+export default CartWithItems;

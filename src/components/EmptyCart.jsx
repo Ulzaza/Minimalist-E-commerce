@@ -11,3 +11,4 @@ function EmptyCart({ openCart }) {
 }
 
 export default EmptyCart;
+export default EmptyCart;

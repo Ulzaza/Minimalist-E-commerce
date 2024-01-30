@@ -25,3 +25,4 @@ function Banner({ title, text, img }) {
 }
 
 export default Banner;
+export default Banner;

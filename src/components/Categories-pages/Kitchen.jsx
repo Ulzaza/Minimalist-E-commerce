@@ -13,3 +13,4 @@ function Kitchen() {
 }
 
 export default Kitchen;
+export default Kitchen;

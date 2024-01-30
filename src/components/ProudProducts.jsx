@@ -14,3 +14,4 @@ function ProudProducts() {
 }
 
 export default ProudProducts;
+export default ProudProducts;

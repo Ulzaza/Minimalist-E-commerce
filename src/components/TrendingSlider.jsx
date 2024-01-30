@@ -36,3 +36,4 @@ function TrendingSlider() {
 }
 
 export default TrendingSlider;
+export default TrendingSlider;

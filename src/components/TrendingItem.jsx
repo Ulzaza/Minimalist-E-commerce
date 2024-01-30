@@ -27,3 +27,4 @@ function TrendingItem() {
 }
 
 export default TrendingItem;
+export default TrendingItem;

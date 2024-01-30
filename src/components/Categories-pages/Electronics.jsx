@@ -13,3 +13,4 @@ function Electronics() {
 }
 
 export default Electronics;
+export default Electronics;

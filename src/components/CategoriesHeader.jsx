@@ -55,3 +55,4 @@ function CategoriesHeader() {
 }
 
 export default CategoriesHeader;
+export default CategoriesHeader;

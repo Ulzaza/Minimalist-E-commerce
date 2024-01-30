@@ -61,3 +61,4 @@ function CartItem() {
 }
 
 export default CartItem;
+export default CartItem;

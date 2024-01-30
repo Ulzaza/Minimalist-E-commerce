@@ -13,3 +13,4 @@ function Lamps() {
 }
 
 export default Lamps;
+export default Lamps;

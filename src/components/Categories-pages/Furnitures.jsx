@@ -13,3 +13,4 @@ function Furnitures() {
 }
 
 export default Furnitures;
+export default Furnitures;

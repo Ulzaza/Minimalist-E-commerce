@@ -25,3 +25,4 @@ function BannerReverse({ title, text, img }) {
 }
 
 export default BannerReverse;
+export default BannerReverse;

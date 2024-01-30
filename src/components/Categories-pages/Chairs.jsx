@@ -13,3 +13,4 @@ function Chairs() {
 }
 
 export default Chairs;
+export default Chairs;

@@ -13,3 +13,4 @@ function All() {
 }
 
 export default All;
+export default All;

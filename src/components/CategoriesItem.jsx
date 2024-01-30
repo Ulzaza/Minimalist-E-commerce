@@ -31,3 +31,4 @@ function CategoriesItem() {
 }
 
 export default CategoriesItem;
+export default CategoriesItem;

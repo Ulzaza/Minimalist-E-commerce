@@ -13,3 +13,4 @@ function SkinCare() {
 }
 
 export default SkinCare;
+export default SkinCare;
