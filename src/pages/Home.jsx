@@ -1,3 +1,10 @@
+
+import React, { useEffect } from 'react';
+
+const Home = () => {
+  useEffect(() => {
+    console.log('Home component rendered');
+  }, []);
 import Banner from "../components/Banner";
 import BannerReverse from "../components/BannerReverse";
 import Footer from "../components/Footer";

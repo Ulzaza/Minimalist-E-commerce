@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, BrowserRouter, Route, Routes } from "react-router-dom";
+import { useNavigate, BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
@@ -41,12 +41,12 @@ function App() {
 
   return (
     <CartContext.Provider value={{ cartItem, addToCart, setCartItem }}>
-      <BrowserRouter>
+      <Router>
         <Navbar />
         <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route path="categories" element={<Categories />}>
-            <Route path="all" element={<All />} />
+          <Route path="/" element={<Home />} />
+          <Route path="categories/*" element={<Categories />}>
+            <Route index element={<All />} />
             <Route path="furnitures" element={<Furnitures />} />
             <Route path="electronics" element={<Electronics />} />
             <Route path="lamps" element={<Lamps />} />
@@ -56,7 +56,7 @@ function App() {
           </Route>
           <Route path="categories/product/:id" element={<ProductPage />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </CartContext.Provider>
   );
 }
